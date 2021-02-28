@@ -35,12 +35,40 @@ if (isset($_POST['submit'])) {
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <style>
+  body
+  {
+  background-image:url("bg.png");
+  background-repeat: no-repeat;
+   background-size: cover;
+  }
   .field_error
   {
     color: red;
     margin-top: 15px;
   }
-
+ .container
+ {
+   margin-top:10%;
+   margin-left:44%;
+ }
+ form
+ {
+   display: block;
+   border-radius:5%;
+   padding: 15px 15px 15px 15px;
+   background-color:#a3d2ca;
+   width:50%;
+ }
+ button
+ {
+   margin-top: 2%;
+   margin-left: 40%;
+ }
+ .login
+ {
+   margin-bottom: 2%;
+   margin-left: 40%;
+ }
 
   </style>
 </head>
@@ -48,6 +76,9 @@ if (isset($_POST['submit'])) {
 <div class="container">
   <div class="login-content">
 <form method="post">
+  <div class="login">
+    <h4>Sign-In</h4>
+  </div>
 <div class="form-group">
     <label>Username</label>
     <input type="text" name="username" class="form-control" placeholder="Username" required>
@@ -56,7 +87,8 @@ if (isset($_POST['submit'])) {
     <label>Password</label>
     <input type="password" name="password" class="form-control" placeholder="Password" required>
   </div>
-  <button type="submit"name="submit" class="btn btn-success btn-flat m-b-30 m-t-30">Sign in</button>
+  <button type="submit"name="submit" class="btn btn-success btn-flat">Sign-In</button>
+
 </form>
 <div class="field_error">
 <?php echo $msg ?>
